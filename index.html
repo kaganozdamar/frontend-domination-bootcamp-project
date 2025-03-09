@@ -1,0 +1,905 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
+    <link href="css/style.css" rel="stylesheet">
+    <!-- prevented bootstrap js cdn from loading before html with "defer" attribute -->
+    <script defer src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+    <title>Document</title>
+</head>
+
+<body>
+    <header>
+        <nav class="navbar navbar-expand-lg bg-body-white">
+            <div class="container">
+                <a class="navbar-brand" href="#">
+                    <img src="img/kariyer-main-logo.svg" alt="kariyer.net">
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                    aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav mb-2 mb-lg-0">
+                        <li class="nav-item me-3">
+                            <a class="nav-link nav-main-link" href="#">İş Ara</a>
+                        </li>
+                        <li class="nav-item me-3">
+                            <a class="nav-link nav-main-link" href="#">Kariyer Planlaması</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link nav-main-link" href="#">Kariyer Rehberi</a>
+                        </li>
+                        <li class="nav-item ms-auto me-3 d-md-none d-lg-inline">
+                            <a class="nav-link publisher" href="#">İlan Paketi Al</a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                                aria-expanded="false">
+                                Giriş Yap / Üye Ol
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" href="#">Action</a></li>
+                                <li>
+                                    <hr class="dropdown-divider">
+                                </li>
+                                <li><a class="dropdown-item" href="#">Another action</a></li>
+                                <li><a class="dropdown-item" href="#">Something else here</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <div class="home-page d-flex justify-content-center">
+        <div class="home-search row">
+            <div class="container-aligner d-none col-1 px-5 d-xl-block"></div>
+            <div class="search-container col-lg-7 col-xl-7 px-0">
+                <div class="search-box-top text-center text-lg-start">
+                    <h2>Kariyer Fırsatlarını Keşfet</h2>
+                    <h5>74.234 <span class="minimized">iş ilanı</span> on binlerce <span class="minimized">şirket</span>
+                    </h5>
+                </div>
+                <div class="search-box-mid d-block mt-2 mb-4">
+                    <div class="search-bar-container row px-0 py-2">
+                        <div class="col-12 col-lg-5">
+                            <input type="text" placeholder="Pozisyon ara" class="form-control search-element"
+                                id="job-search">
+                        </div>
+                        <div class="col-4 d-none d-lg-block">
+                            <input type="text" placeholder="Şehir veya ilçe ara" class="form-control search-element"
+                                id="location-search">
+                        </div>
+                        <div class="col-2 d-none d-lg-block">
+                            <button type="button" class="btn search-element" id="find-job-button">
+                                <i class="fa-solid fa-magnifying-glass">
+                                    <span id="find-job">İŞ BUL</span>
+                                </i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <div class="search-box-bottom">
+                    <div class="container search-title p-0 ms-0 mb-3">
+                        <h7 style="color: rgb(135, 135, 135);">POPÜLER ARAMALAR</h7>
+                    </div>
+                    <div class="popular-search d-inline">
+                        <div class="popular-search-row-1 d-flex flex-wrap">
+                            <a href="" class="popular-search-item">Finans Uzmanı</a>
+                            <a href="" class="popular-search-item">Dijital Pazarlama Uzmanı</a>
+                            <a href="" class="popular-search-item">Yazılım Geliştirme Uzmanı</a>
+                            <a href="" class="popular-search-item">Proje Yöneticisi</a>
+                            <a href="" class="popular-search-item">İK Uzmanı</a>
+                        </div>
+                        <div class="popular-search-row-1 d-none d-xl-block">
+                            <a href="" class="popular-search-item">İstanbul (Avrupa)</a>
+                            <a href="" class="popular-search-item">İstanbul (Asya)</a>
+                            <a href="" class="popular-search-item">Ankara</a>
+                            <a href="" class="popular-search-item">İzmir</a>
+                            <a href="" class="popular-search-item">Bursa</a>
+                            <a href="" class="popular-search-item">İstanbul</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="home-search-img col-lg-3 col-xl-4 p-0 d-none d-lg-flex">
+                <img src="img/kariyer-search-bar-img.webp" alt="Kariyer logo">
+            </div>
+        </div>
+    </div>
+    <div class="home-mid">
+        <div class="home-banner d-flex justify-content-center px-5">
+            <div id="carouselExampleAutoplaying" class="carousel slide" data-bs-ride="carousel">
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <img src="img/banner-1.webp" class="d-block w-100" alt="...">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="img/banner-2.webp" class="d-block w-100" alt="...">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="img/banner-3.webp" class="d-block w-100" alt="...">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="img/banner-4.webp" class="d-block w-100" alt="...">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="img/banner-5.webp" class="d-block w-100" alt="...">
+                    </div>
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleAutoplaying"
+                    data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleAutoplaying"
+                    data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Next</span>
+                </button>
+            </div>
+        </div>
+        <div class="home-page-promoted d-flex justify-content-center px-md-4 px-lg-0">
+            <div class="title-container d-flex flex-column">
+                <h5 class="promoted-title mt-4 mb-3">ÖNE ÇIKAN İLANLAR</h5>
+                <div class="row">
+                    <div class="promoted-container col pt-3 me-3 mb-4 text-center">
+                        <div class="promoted-card container d-flex flex-column justify-content-center">
+                            <div class="promoted-card-top mb-2">
+                                <img class="promoted-card-img" src="img/job-carousel-1.webp" alt="Turkcell">
+                            </div>
+                            <div class="promoted-card-bottom mt-1">
+                                <h6 class="promoted-card-job">Turkcell Gnçytnk 2025</h6>
+                                <p class="promoted-card-company">Turkcell</p>
+                                <p class="promoted-card-location">İstanbul(Tümü)</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="promoted-container col pt-3 me-3 mb-4 text-center">
+                        <div class="promoted-card container d-flex flex-column justify-content-center">
+                            <div class="promoted-card-top mb-2">
+                                <img class="promoted-card-img" src="img/job-carousel-1.webp" alt="Turkcell">
+                            </div>
+                            <div class="promoted-card-bottom mt-1">
+                                <h6 class="promoted-card-job">Turkcell Gnçytnk 2025</h6>
+                                <p class="promoted-card-company">Turkcell</p>
+                                <p class="promoted-card-location">İstanbul(Tümü)</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="promoted-container col pt-3 me-3 mb-4 text-center">
+                        <div class="promoted-card container d-flex flex-column justify-content-center">
+                            <div class="promoted-card-top mb-2">
+                                <img class="promoted-card-img" src="img/job-carousel-1.webp" alt="Turkcell">
+                            </div>
+                            <div class="promoted-card-bottom mt-1">
+                                <h6 class="promoted-card-job">Turkcell Gnçytnk 2025</h6>
+                                <p class="promoted-card-company">Turkcell</p>
+                                <p class="promoted-card-location">İstanbul(Tümü)</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="promoted-container col pt-3 me-3 mb-4 text-center">
+                        <div class="promoted-card container d-flex flex-column justify-content-center">
+                            <div class="promoted-card-top mb-2">
+                                <img class="promoted-card-img" src="img/job-carousel-1.webp" alt="Turkcell">
+                            </div>
+                            <div class="promoted-card-bottom mt-1">
+                                <h6 class="promoted-card-job">Turkcell Gnçytnk 2025</h6>
+                                <p class="promoted-card-company">Turkcell</p>
+                                <p class="promoted-card-location">İstanbul(Tümü)</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="promoted-container col pt-3 mb-4 text-center">
+                        <div class="promoted-card container d-flex flex-column justify-content-center">
+                            <div class="promoted-card-top mb-2">
+                                <img class="promoted-card-img" src="img/job-carousel-1.webp" alt="Turkcell">
+                            </div>
+                            <div class="promoted-card-bottom mt-1">
+                                <h6 class="promoted-card-job">Turkcell Gnçytnk 2025</h6>
+                                <p class="promoted-card-company">Turkcell</p>
+                                <p class="promoted-card-location">İstanbul(Tümü)</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="home-fresh-published d-flex justify-content-center my-3">
+            <div class="container">
+                <div class="home-fresh-published-container row">
+                    <div class=" d-none d-lg-flex col-1"></div>
+                    <ul class="list-group d-none d-lg-flex col-2">
+                        <li class="list-group-item">Bugün Yayınlananlar</li>
+                        <li class="list-group-item">Uzaktan Çalışma İlanları</li>
+                        <li class="list-group-item">Part-time İlanlar</li>
+                        <li class="list-group-item">Yeni Mezun İlanları</li>
+                        <li class="list-group-item">Yönetici İlanları</li>
+                    </ul>
+                    <div class="fresh-published col-lg-8 d-flex justify-content-center">
+                        <div class="fresh-published-container p-4">
+                            <div class="fresh-published-title-container d-flex justify-content-between">
+                                <h5 class="fresh-published-title">BUGÜN YAYINLANANLAR</h5>
+                                <a id="all-post-link" href="">Tüm İlanlar</a>
+                            </div>
+                            <div class="fresh-published-post row">
+                                <a class="col-6 mb-3" href="">
+                                    <div class="fresh-published-card p-3">
+                                        <div class="row">
+                                            <img class="col-3" src="img/fresh-published-1.webp" alt="Şımart Teknoloji">
+                                            <div class="fresh-published-card-info col-9">
+                                                <span class="fresh-published-pos">Üretim Teknikeri</span>
+                                                <br>
+                                                <span class="fresh-published-comp">Şımart Elektronik Pazarlama</span>
+                                                <br>
+                                                <span class="fresh-published-loc">Ankara <b
+                                                        style="color: rgb(51, 51, 51);">•</b> İş Yerinde</span>
+                                                <div class="d-flex justify-content-between">
+                                                    <span class="fresh-published-type">Tam zamanlı</span>
+                                                    <span class="fresh-published-new">Yeni</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </a>
+                                <a class="col-6 mb-3" href="">
+                                    <div class="fresh-published-card p-3">
+                                        <div class="row">
+                                            <img class="col-3" src="img/fresh-published-1.webp" alt="Şımart Teknoloji">
+                                            <div class="fresh-published-card-info col-9">
+                                                <span class="fresh-published-pos">Üretim Teknikeri</span>
+                                                <br>
+                                                <span class="fresh-published-comp">Şımart Elektronik Pazarlama</span>
+                                                <br>
+                                                <span class="fresh-published-loc">Ankara <b
+                                                        style="color: rgb(51, 51, 51);">•</b> İş Yerinde</span>
+                                                <div class="d-flex justify-content-between">
+                                                    <span class="fresh-published-type">Tam zamanlı</span>
+                                                    <span class="fresh-published-new">Yeni</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </a>
+                                <a class="col-6 mb-3" href="">
+                                    <div class="fresh-published-card p-3">
+                                        <div class="row">
+                                            <img class="col-3" src="img/fresh-published-1.webp" alt="Şımart Teknoloji">
+                                            <div class="fresh-published-card-info col-9">
+                                                <span class="fresh-published-pos">Üretim Teknikeri</span>
+                                                <br>
+                                                <span class="fresh-published-comp">Şımart Elektronik Pazarlama</span>
+                                                <br>
+                                                <span class="fresh-published-loc">Ankara <b
+                                                        style="color: rgb(51, 51, 51);">•</b> İş Yerinde</span>
+                                                <div class="d-flex justify-content-between">
+                                                    <span class="fresh-published-type">Tam zamanlı</span>
+                                                    <span class="fresh-published-new">Yeni</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </a>
+                                <a class="col-6 mb-3" href="">
+                                    <div class="fresh-published-card p-3">
+                                        <div class="row">
+                                            <img class="col-3" src="img/fresh-published-1.webp" alt="Şımart Teknoloji">
+                                            <div class="fresh-published-card-info col-9">
+                                                <span class="fresh-published-pos">Üretim Teknikeri</span>
+                                                <br>
+                                                <span class="fresh-published-comp">Şımart Elektronik Pazarlama</span>
+                                                <br>
+                                                <span class="fresh-published-loc">Ankara <b
+                                                        style="color: rgb(51, 51, 51);">•</b> İş Yerinde</span>
+                                                <div class="d-flex justify-content-between">
+                                                    <span class="fresh-published-type">Tam zamanlı</span>
+                                                    <span class="fresh-published-new">Yeni</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </a>
+                                <a class="col-6 mb-3" href="">
+                                    <div class="fresh-published-card p-3">
+                                        <div class="row">
+                                            <img class="col-3" src="img/fresh-published-1.webp" alt="Şımart Teknoloji">
+                                            <div class="fresh-published-card-info col-9">
+                                                <span class="fresh-published-pos">Üretim Teknikeri</span>
+                                                <br>
+                                                <span class="fresh-published-comp">Şımart Elektronik Pazarlama</span>
+                                                <br>
+                                                <span class="fresh-published-loc">Ankara <b
+                                                        style="color: rgb(51, 51, 51);">•</b> İş Yerinde</span>
+                                                <div class="d-flex justify-content-between">
+                                                    <span class="fresh-published-type">Tam zamanlı</span>
+                                                    <span class="fresh-published-new">Yeni</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </a>
+                                <a class="col-6 mb-3" href="">
+                                    <div class="fresh-published-card p-3">
+                                        <div class="row">
+                                            <img class="col-3" src="img/fresh-published-1.webp" alt="Şımart Teknoloji">
+                                            <div class="fresh-published-card-info col-9">
+                                                <span class="fresh-published-pos">Üretim Teknikeri</span>
+                                                <br>
+                                                <span class="fresh-published-comp">Şımart Elektronik Pazarlama</span>
+                                                <br>
+                                                <span class="fresh-published-loc">Ankara <b
+                                                        style="color: rgb(51, 51, 51);">•</b> İş Yerinde</span>
+                                                <div class="d-flex justify-content-between">
+                                                    <span class="fresh-published-type">Tam zamanlı</span>
+                                                    <span class="fresh-published-new">Yeni</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="home-career-plan d-flex justify-content-center">
+            <div class="container">
+                <div class="home-career-plan-container row">
+                    <div class="d-none d-lg-flex col-1"></div>
+                    <div class="home-career-plan-info col-12 col-lg-6 py-4">
+                        <h3 class="career-plan-info-title"> KARİYERİNİ PLANLA</h3>
+                        <p class="career-plan-info-text">Kariyerini planlamaya hazır mısın? Üniversite tercihinden
+                            itibaren kariyer yolculuğunun her adımını titizlikle planlayabileceğin içerikleri senin için
+                            bir araya getirdik. Merak ettiğin tüm sorulara yanıt bulacak, iş fırsatlarını keşfedeceksin!
+                        </p>
+                        <a class="career-plan-button-link" href="">
+                            <div class="career-plan-button-container d-flex align-items-center p-4 mb-2">
+                                <span class="material-symbols-outlined me-3">
+                                    history_edu
+                                </span>
+                                <span class="career-plan-button-text">Hangi bölümde seni ne bekliyor?</span>
+                            </div>
+                        </a>
+                        <a class="career-plan-button-link" href="">
+                            <div class="career-plan-button-container d-flex align-items-center p-4 mb-2">
+                                <span class="material-symbols-outlined me-3">
+                                    history_edu
+                                </span>
+                                <span class="career-plan-button-text">Hangi bölümde seni ne bekliyor?</span>
+                            </div>
+                        </a>
+                        <a class="career-plan-button-link" href="">
+                            <div class="career-plan-button-container d-flex align-items-center p-4 mb-2">
+                                <span class="material-symbols-outlined me-3">
+                                    history_edu
+                                </span>
+                                <span class="career-plan-button-text">Hangi bölümde seni ne bekliyor?</span>
+                            </div>
+                        </a>
+                        <a class="career-plan-button-link" href="">
+                            <div class="career-plan-button-container d-flex align-items-center p-4 mb-2">
+                                <span class="material-symbols-outlined me-3">
+                                    history_edu
+                                </span>
+                                <span class="career-plan-button-text">Hangi bölümde seni ne bekliyor?</span>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="d-none d-lg-flex col-1"></div>
+                    <div class="home-career-plan-img d-none d-lg-flex col-4 pt-5">
+                        <img src="img/plan-career.webp" alt="Kariyer Planı">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="home-career-guide d-flex justify-content-center">
+            <div class="container ps-lg-5 row justify-content-center">
+                <div class="home-career-guide-title-container col-12 d-flex justify-content-between">
+                    <h3 class="home-career-guide-title ps-lg-5 my-4">KARİYER REHBERİ</h3>
+                    <span class="d-flex align-items-center">Tümünü Gör</span>
+                </div>
+                <div class="home-career-guide-container row col-12 ps-0 ps-lg-5 mb-2 justify-content-center">
+                    <a class="col-3" href="">
+                        <div class="home-career-guide-card">
+                            <img src="img/career-guide-1.jpg" alt="Rehber">
+                            <p class="home-career-guide-text ps-4 pt-3 pb-4">Genelde yayımlandı! İş yerinde mobbing'e
+                                karşı yeni adım!</p>
+                        </div>
+                    </a>
+                    <a class="col-3" href="">
+                        <div class="home-career-guide-card">
+                            <img src="img/career-guide-1.jpg" alt="Rehber">
+                            <p class="home-career-guide-text ps-4 pt-3 pb-4">Genelde yayımlandı! İş yerinde mobbing'e
+                                karşı yeni adım!</p>
+                        </div>
+                    </a>
+                    <a class="col-3" href="">
+                        <div class="home-career-guide-card">
+                            <img src="img/career-guide-1.jpg" alt="Rehber">
+                            <p class="home-career-guide-text ps-4 pt-3 pb-4">Genelde yayımlandı! İş yerinde mobbing'e
+                                karşı yeni adım!</p>
+                        </div>
+                    </a>
+                    <a class="col-3" href="">
+                        <div class="home-career-guide-card">
+                            <img src="img/career-guide-1.jpg" alt="Rehber">
+                            <p class="home-career-guide-text ps-4 pt-3 pb-4">Genelde yayımlandı! İş yerinde mobbing'e
+                                karşı yeni adım!</p>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="home-seo d-flex justify-content-center">
+            <div class="container">
+                <div class="row justify-content-center mt-3 ps-lg-5">
+                    <div class="accordion accordion-flush col-lg-11" id="accordionFlushExample">
+                        <div class="accordion-item mb-3">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                    data-bs-target="#flush-collapseOne" aria-expanded="false"
+                                    aria-controls="flush-collapseOne">
+                                    <span class="accordion-option">Sektöre Göre İş İlanları</span>
+                                </button>
+                            </h2>
+                            <div id="flush-collapseOne" class="accordion-collapse collapse"
+                                data-bs-parent="#accordionFlushExample">
+                                <div class="accordion-body">
+                                    <div class="row mb-3">
+                                        <a class="col" href="">Bilişim (876)</a>
+                                        <a class="col" href="">Bilişim (876)</a>
+                                        <a class="col" href="">Bilişim (876)</a>
+                                        <a class="col" href="">Bilişim (876)</a>
+                                        <a class="col" href="">Bilişim (876)</a>
+                                    </div>
+                                    <div class="row mb-3">
+                                        <a class="col" href="">Bilişim (876)</a>
+                                        <a class="col" href="">Bilişim (876)</a>
+                                        <a class="col" href="">Bilişim (876)</a>
+                                        <a class="col" href="">Bilişim (876)</a>
+                                        <a class="col" href="">Bilişim (876)</a>
+                                    </div>
+                                    <div class="row mb-3">
+                                        <a class="col" href="">Bilişim (876)</a>
+                                        <a class="col" href="">Bilişim (876)</a>
+                                        <a class="col" href="">Bilişim (876)</a>
+                                        <a class="col" href="">Bilişim (876)</a>
+                                        <a class="col" href="">Bilişim (876)</a>
+                                    </div>
+                                    <div class="row mb-3">
+                                        <a class="col" href="">Bilişim (876)</a>
+                                        <a class="col" href="">Bilişim (876)</a>
+                                        <a class="col" href="">Bilişim (876)</a>
+                                        <a class="col" href="">Bilişim (876)</a>
+                                        <a class="col" href="">Bilişim (876)</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item mb-3">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                    data-bs-target="#flush-collapseTwo" aria-expanded="false"
+                                    aria-controls="flush-collapseTwo">
+                                    <span class="accordion-option">Sektöre Göre İş İlanları</span>
+                                </button>
+                            </h2>
+                            <div id="flush-collapseTwo" class="accordion-collapse collapse"
+                                data-bs-parent="#accordionFlushExample">
+                                <div class="accordion-body">
+                                    <div class="row mb-3">
+                                        <a class="col" href="">Bilişim (876)</a>
+                                        <a class="col" href="">Bilişim (876)</a>
+                                        <a class="col" href="">Bilişim (876)</a>
+                                        <a class="col" href="">Bilişim (876)</a>
+                                        <a class="col" href="">Bilişim (876)</a>
+                                    </div>
+                                    <div class="row mb-3">
+                                        <a class="col" href="">Bilişim (876)</a>
+                                        <a class="col" href="">Bilişim (876)</a>
+                                        <a class="col" href="">Bilişim (876)</a>
+                                        <a class="col" href="">Bilişim (876)</a>
+                                        <a class="col" href="">Bilişim (876)</a>
+                                    </div>
+                                    <div class="row mb-3">
+                                        <a class="col" href="">Bilişim (876)</a>
+                                        <a class="col" href="">Bilişim (876)</a>
+                                        <a class="col" href="">Bilişim (876)</a>
+                                        <a class="col" href="">Bilişim (876)</a>
+                                        <a class="col" href="">Bilişim (876)</a>
+                                    </div>
+                                    <div class="row mb-3">
+                                        <a class="col" href="">Bilişim (876)</a>
+                                        <a class="col" href="">Bilişim (876)</a>
+                                        <a class="col" href="">Bilişim (876)</a>
+                                        <a class="col" href="">Bilişim (876)</a>
+                                        <a class="col" href="">Bilişim (876)</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item mb-3">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                    data-bs-target="#flush-collapseThree" aria-expanded="false"
+                                    aria-controls="flush-collapseThree">
+                                    <span class="accordion-option">Sektöre Göre İş İlanları</span>
+                                </button>
+                            </h2>
+                            <div id="flush-collapseThree" class="accordion-collapse collapse"
+                                data-bs-parent="#accordionFlushExample">
+                                <div class="accordion-body">
+                                    <div class="row mb-3">
+                                        <a class="col" href="">Bilişim (876)</a>
+                                        <a class="col" href="">Bilişim (876)</a>
+                                        <a class="col" href="">Bilişim (876)</a>
+                                        <a class="col" href="">Bilişim (876)</a>
+                                        <a class="col" href="">Bilişim (876)</a>
+                                    </div>
+                                    <div class="row mb-3">
+                                        <a class="col" href="">Bilişim (876)</a>
+                                        <a class="col" href="">Bilişim (876)</a>
+                                        <a class="col" href="">Bilişim (876)</a>
+                                        <a class="col" href="">Bilişim (876)</a>
+                                        <a class="col" href="">Bilişim (876)</a>
+                                    </div>
+                                    <div class="row mb-3">
+                                        <a class="col" href="">Bilişim (876)</a>
+                                        <a class="col" href="">Bilişim (876)</a>
+                                        <a class="col" href="">Bilişim (876)</a>
+                                        <a class="col" href="">Bilişim (876)</a>
+                                        <a class="col" href="">Bilişim (876)</a>
+                                    </div>
+                                    <div class="row mb-3">
+                                        <a class="col" href="">Bilişim (876)</a>
+                                        <a class="col" href="">Bilişim (876)</a>
+                                        <a class="col" href="">Bilişim (876)</a>
+                                        <a class="col" href="">Bilişim (876)</a>
+                                        <a class="col" href="">Bilişim (876)</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item mb-3">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                    data-bs-target="#flush-collapseFour" aria-expanded="false"
+                                    aria-controls="flush-collapseFour">
+                                    <span class="accordion-option">Sektöre Göre İş İlanları</span>
+                                </button>
+                            </h2>
+                            <div id="flush-collapseFour" class="accordion-collapse collapse"
+                                data-bs-parent="#accordionFlushExample">
+                                <div class="accordion-body">
+                                    <div class="row mb-3">
+                                        <a class="col" href="">Bilişim (876)</a>
+                                        <a class="col" href="">Bilişim (876)</a>
+                                        <a class="col" href="">Bilişim (876)</a>
+                                        <a class="col" href="">Bilişim (876)</a>
+                                        <a class="col" href="">Bilişim (876)</a>
+                                    </div>
+                                    <div class="row mb-3">
+                                        <a class="col" href="">Bilişim (876)</a>
+                                        <a class="col" href="">Bilişim (876)</a>
+                                        <a class="col" href="">Bilişim (876)</a>
+                                        <a class="col" href="">Bilişim (876)</a>
+                                        <a class="col" href="">Bilişim (876)</a>
+                                    </div>
+                                    <div class="row mb-3">
+                                        <a class="col" href="">Bilişim (876)</a>
+                                        <a class="col" href="">Bilişim (876)</a>
+                                        <a class="col" href="">Bilişim (876)</a>
+                                        <a class="col" href="">Bilişim (876)</a>
+                                        <a class="col" href="">Bilişim (876)</a>
+                                    </div>
+                                    <div class="row mb-3">
+                                        <a class="col" href="">Bilişim (876)</a>
+                                        <a class="col" href="">Bilişim (876)</a>
+                                        <a class="col" href="">Bilişim (876)</a>
+                                        <a class="col" href="">Bilişim (876)</a>
+                                        <a class="col" href="">Bilişim (876)</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item mb-3">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                    data-bs-target="#flush-collapseFive" aria-expanded="false"
+                                    aria-controls="flush-collapseFive">
+                                    <span class="accordion-option">Sektöre Göre İş İlanları</span>
+                                </button>
+                            </h2>
+                            <div id="flush-collapseFive" class="accordion-collapse collapse"
+                                data-bs-parent="#accordionFlushExample">
+                                <div class="accordion-body">
+                                    <div class="row mb-3">
+                                        <a class="col" href="">Bilişim (876)</a>
+                                        <a class="col" href="">Bilişim (876)</a>
+                                        <a class="col" href="">Bilişim (876)</a>
+                                        <a class="col" href="">Bilişim (876)</a>
+                                        <a class="col" href="">Bilişim (876)</a>
+                                    </div>
+                                    <div class="row mb-3">
+                                        <a class="col" href="">Bilişim (876)</a>
+                                        <a class="col" href="">Bilişim (876)</a>
+                                        <a class="col" href="">Bilişim (876)</a>
+                                        <a class="col" href="">Bilişim (876)</a>
+                                        <a class="col" href="">Bilişim (876)</a>
+                                    </div>
+                                    <div class="row mb-3">
+                                        <a class="col" href="">Bilişim (876)</a>
+                                        <a class="col" href="">Bilişim (876)</a>
+                                        <a class="col" href="">Bilişim (876)</a>
+                                        <a class="col" href="">Bilişim (876)</a>
+                                        <a class="col" href="">Bilişim (876)</a>
+                                    </div>
+                                    <div class="row mb-3">
+                                        <a class="col" href="">Bilişim (876)</a>
+                                        <a class="col" href="">Bilişim (876)</a>
+                                        <a class="col" href="">Bilişim (876)</a>
+                                        <a class="col" href="">Bilişim (876)</a>
+                                        <a class="col" href="">Bilişim (876)</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row justify-content-center">
+                    <div class="col-lg-1"></div>
+                    <div class="col-lg-11">
+                        <div class="home-seo-title mb-3">
+                            <strong>Kariyer.net İş ilanları</strong>
+                        </div>
+                        <div class="home-seo-text">
+                            <p>Dijital İK'nın öncüsü Kariyer.net, 1999 yılından bugüne Türkiye’nin en büyük istihdam
+                                platformu. Açık iş pozisyonlarından iş piyasasına dair iç görülere, kişisel gelişim
+                                odaklı çalışmalardan pozisyon - yetenek uyumuna kadar tüm deneyimini; mavi yakalıdan
+                                yönetici adaylarına, işverenden stajyer öğrenciye kadar herkese ulaştırma görevini
+                                üstleniyor. Öğrenim göreceğin üniversite, seçeceğin bölüm hakkındaki tüm bilgiye ve
+                                mezun olduktan sonra hayalindeki iş fırsatlarına da yine Kariyer.net ile ulaşmak çok
+                                kolay!</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="row justify-content-center">
+                    <div class="col-lg-1"></div>
+                    <div class="col-lg-11">
+                        <div class="home-seo-title mb-3">
+                            <strong>Kariyer.net İş ilanları</strong>
+                        </div>
+                        <div class="home-seo-text">
+                            <p>Dijital İK'nın öncüsü Kariyer.net, 1999 yılından bugüne Türkiye’nin en büyük istihdam
+                                platformu. Açık iş pozisyonlarından iş piyasasına dair iç görülere, kişisel gelişim
+                                odaklı çalışmalardan pozisyon - yetenek uyumuna kadar tüm deneyimini; mavi yakalıdan
+                                yönetici adaylarına, işverenden stajyer öğrenciye kadar herkese ulaştırma görevini
+                                üstleniyor. Öğrenim göreceğin üniversite, seçeceğin bölüm hakkındaki tüm bilgiye ve
+                                mezun olduktan sonra hayalindeki iş fırsatlarına da yine Kariyer.net ile ulaşmak çok
+                                kolay!</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="row justify-content-center">
+                    <div class="col-lg-1"></div>
+                    <div class="col-lg-11">
+                        <div class="home-seo-title mb-3">
+                            <strong>Kariyer.net İş ilanları</strong>
+                        </div>
+                        <div class="home-seo-text">
+                            <p>Dijital İK'nın öncüsü Kariyer.net, 1999 yılından bugüne Türkiye’nin en büyük istihdam
+                                platformu. Açık iş pozisyonlarından iş piyasasına dair iç görülere, kişisel gelişim
+                                odaklı çalışmalardan pozisyon - yetenek uyumuna kadar tüm deneyimini; mavi yakalıdan
+                                yönetici adaylarına, işverenden stajyer öğrenciye kadar herkese ulaştırma görevini
+                                üstleniyor. Öğrenim göreceğin üniversite, seçeceğin bölüm hakkındaki tüm bilgiye ve
+                                mezun olduktan sonra hayalindeki iş fırsatlarına da yine Kariyer.net ile ulaşmak çok
+                                kolay!</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="row justify-content-center">
+                    <div class="col-lg-1"></div>
+                    <div class="col-lg-11">
+                        <div class="home-seo-title mb-3">
+                            <strong>Kariyer.net İş ilanları</strong>
+                        </div>
+                        <div class="home-seo-text">
+                            <p>Dijital İK'nın öncüsü Kariyer.net, 1999 yılından bugüne Türkiye’nin en büyük istihdam
+                                platformu. Açık iş pozisyonlarından iş piyasasına dair iç görülere, kişisel gelişim
+                                odaklı çalışmalardan pozisyon - yetenek uyumuna kadar tüm deneyimini; mavi yakalıdan
+                                yönetici adaylarına, işverenden stajyer öğrenciye kadar herkese ulaştırma görevini
+                                üstleniyor. Öğrenim göreceğin üniversite, seçeceğin bölüm hakkındaki tüm bilgiye ve
+                                mezun olduktan sonra hayalindeki iş fırsatlarına da yine Kariyer.net ile ulaşmak çok
+                                kolay!</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="row justify-content-center">
+                    <div class="col-lg-1"></div>
+                    <div class="col-lg-11">
+                        <div class="home-seo-title mb-3">
+                            <strong>Kariyer.net İş ilanları</strong>
+                        </div>
+                        <div class="home-seo-text">
+                            <p>Dijital İK'nın öncüsü Kariyer.net, 1999 yılından bugüne Türkiye’nin en büyük istihdam
+                                platformu. Açık iş pozisyonlarından iş piyasasına dair iç görülere, kişisel gelişim
+                                odaklı çalışmalardan pozisyon - yetenek uyumuna kadar tüm deneyimini; mavi yakalıdan
+                                yönetici adaylarına, işverenden stajyer öğrenciye kadar herkese ulaştırma görevini
+                                üstleniyor. Öğrenim göreceğin üniversite, seçeceğin bölüm hakkındaki tüm bilgiye ve
+                                mezun olduktan sonra hayalindeki iş fırsatlarına da yine Kariyer.net ile ulaşmak çok
+                                kolay!</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="footer-container d-flex justify-content-center">
+        <footer class="kariyer-footer">
+            <div class="d-flex justify-content-center px-5 px-lg-4">
+                <div class="footer-top-left d-flex justify-content-between">
+                    <div class="mt-5">
+                        <p class="footer-link-title">SİTE KULLANIMI</p>
+                        <ul>
+                            <li><a class="footer-link" href="">Genel Koşullar</a></li>
+                            <li><a class="footer-link" href="">Genel Koşullar</a></li>
+                        </ul>
+                    </div>
+                    <div class="mt-5">
+                        <p class="footer-link-title">VERİ POLİTİKAMIZ</p>
+                        <ul>
+                            <li><a class="footer-link" href="">Aday Üyelik Aydınlatma Metni</a></li>
+                            <li><a class="footer-link" href="">Aday Üyelik Aydınlatma Metni</a></li>
+                            <li><a class="footer-link" href="">Aday Üyelik Aydınlatma Metni</a></li>
+                            <li><a class="footer-link" href="">Aday Üyelik Aydınlatma Metni</a></li>
+                            <li><a class="footer-link" href="">Aday Üyelik Aydınlatma Metni</a></li>
+                            <li><a class="footer-link" href="">Aday Üyelik Aydınlatma Metni</a></li>
+                            <li><a class="footer-link" href="">Aday Üyelik Aydınlatma Metni</a></li>
+                            <li><a class="footer-link" href="">Aday Üyelik Aydınlatma Metni</a></li>
+                        </ul>
+                    </div>
+                    <div class="mt-5">
+                        <p class="footer-link-title">YARDIM</p>
+                        <ul>
+                            <li><a class="footer-link" href="">Sorum Var</a></li>
+                            <li><a class="footer-link" href="">Önerim Var</a></li>
+                            <li><a class="footer-link" href="">Sık Sorulan Sorular</a></li>
+                        </ul>
+                    </div>
+                    <div class="mt-5">
+                        <p class="footer-link-title">HAKKIMIZDA</p>
+                        <ul>
+                            <li><a class="footer-link" href="">Hakkımızda</a></li>
+                            <li><a class="footer-link" href="">Reklam Verin</a></li>
+                        </ul>
+                    </div>
+                    <div class="mt-5">
+                        <p class="footer-link-title">SOSYAL MEDYA</p>
+                        <ul>
+                            <li>
+                                <a class="footer-link mb-2" href="">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20"
+                                        fill="none">
+                                        <path
+                                            d="M20 10.001C20 15.5238 15.5228 20.001 10 20.001C4.47715 20.001 0 15.5238 0 10.001C0 4.47813 4.47715 0.000976562 10 0.000976562C15.5228 0.000976562 20 4.47813 20 10.001Z"
+                                            fill="white"></path>
+                                        <path
+                                            d="M12.7796 10.5164H10.9258V17.3079H8.11707V10.5164H6.78125V8.12957H8.11707V6.58503C8.11707 5.48052 8.64173 3.75098 10.9508 3.75098L13.0312 3.75968V6.07648H11.5217C11.2741 6.07648 10.9259 6.2002 10.9259 6.72708V8.13179H13.025L12.7796 10.5164Z"
+                                            fill="#8316B5"></path>
+                                    </svg>
+                                    <span class="ms-1">Facebook</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a class="footer-link mb-2" href="">
+                                    <svg width="20" height="20" viewBox="0 0 20 20" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path
+                                            d="M20 10.001C20 15.5238 15.5228 20.001 10 20.001C4.47715 20.001 0 15.5238 0 10.001C0 4.47813 4.47715 0.000976562 10 0.000976562C15.5228 0.000976562 20 4.47813 20 10.001Z"
+                                            fill="white"></path>
+                                        <path
+                                            d="M5.02605 5.00098L9.15111 10.5166L5 15.001H5.93425L9.56853 11.0748L12.5049 15.001H15.6842L11.3271 9.17514L15.1909 5.00098H14.2566L10.9096 8.6169L8.20533 5.00098H5.02605ZM6.39993 5.68914H7.8605L14.3101 14.3127H12.8496L6.39993 5.68914Z"
+                                            fill="#8316B5"></path>
+                                    </svg>
+                                    <span class="ms-1">X</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a class="footer-link mb-2" href="">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20"
+                                        fill="none">
+                                        <circle cx="10" cy="10.001" r="10" fill="white"></circle>
+                                        <path fill-rule="evenodd" clip-rule="evenodd"
+                                            d="M15.531 10.2012C15.5309 10.1043 15.5308 10.0073 15.5308 9.91016C15.5308 9.81303 15.5309 9.71601 15.531 9.61908C15.5318 8.94131 15.5326 8.26774 15.4942 7.58857C15.4502 6.68776 15.2452 5.88949 14.586 5.23036C13.9269 4.57124 13.1286 4.36617 12.2278 4.32223C11.5487 4.28379 10.8751 4.28458 10.1973 4.28538C10.1004 4.2855 10.0034 4.28561 9.90625 4.28561C9.80913 4.28561 9.71212 4.2855 9.61519 4.28538C8.93742 4.28458 8.26384 4.28379 7.58466 4.32223C6.68386 4.36617 5.88558 4.57124 5.22646 5.23036C4.56733 5.88949 4.36227 6.68776 4.31833 7.58857C4.27988 8.26775 4.28068 8.94132 4.28148 9.6191C4.28159 9.71602 4.28171 9.81303 4.28171 9.91016C4.28171 10.0073 4.28159 10.1043 4.28148 10.2012C4.28068 10.879 4.27988 11.5526 4.31833 12.2317C4.36227 13.1326 4.56733 13.9308 5.22646 14.59C5.88558 15.2491 6.68386 15.4541 7.58466 15.4981C8.26384 15.5365 8.9374 15.5357 9.61517 15.5349C9.7121 15.5348 9.80912 15.5347 9.90625 15.5347C10.0034 15.5347 10.1004 15.5348 10.1973 15.5349C10.8751 15.5357 11.5487 15.5365 12.2278 15.4981C13.1286 15.4541 13.9269 15.2491 14.586 14.59C15.2452 13.9308 15.4502 13.1326 15.4942 12.2317C15.5326 11.5526 15.5318 10.879 15.531 10.2012ZM9.90734 5.29736C9.79249 5.29736 9.65926 5.29607 9.51302 5.29465C8.61484 5.28594 7.22585 5.27247 6.58974 5.5244C6.33341 5.62693 6.143 5.75143 5.94526 5.94917C5.74752 6.1469 5.62302 6.33732 5.52049 6.59365C5.26856 7.22976 5.28204 8.61874 5.29075 9.51693C5.29217 9.66317 5.29346 9.7964 5.29346 9.91125C5.29346 10.0261 5.29217 10.1593 5.29075 10.3056C5.28204 11.2037 5.26856 12.5927 5.52049 13.2288C5.62302 13.4852 5.74752 13.6756 5.94526 13.8733C6.143 14.0711 6.33341 14.1956 6.58974 14.2981C7.22585 14.55 8.61484 14.5366 9.51302 14.5278H9.51313C9.65933 14.5264 9.79252 14.5251 9.90734 14.5251C10.0222 14.5251 10.1554 14.5264 10.3015 14.5278H10.3017C11.1998 14.5366 12.5888 14.55 13.2249 14.2981C13.4813 14.1956 13.6717 14.0711 13.8694 13.8733C14.0672 13.6756 14.1917 13.4852 14.2942 13.2288C14.5461 12.5927 14.5326 11.2038 14.5239 10.3056V10.3055C14.5225 10.1593 14.5212 10.0261 14.5212 9.91125C14.5212 9.79642 14.5225 9.66323 14.5239 9.51704V9.51693C14.5326 8.61874 14.5461 7.22976 14.2942 6.59365C14.1917 6.33732 14.0672 6.1469 13.8694 5.94917C13.6717 5.75143 13.4813 5.62693 13.2249 5.5244C12.5888 5.27247 11.1998 5.28594 10.3017 5.29465C10.1554 5.29607 10.0222 5.29736 9.90734 5.29736ZM12.9091 7.58095C13.2826 7.58095 13.5829 7.28068 13.5829 6.90717C13.5829 6.53367 13.2826 6.2334 12.9091 6.2334C12.5356 6.2334 12.2354 6.53367 12.2354 6.90717C12.2354 7.28068 12.5356 7.58095 12.9091 7.58095ZM12.7915 9.90992C12.7915 11.5065 11.5026 12.7954 9.90602 12.7954C8.30947 12.7954 7.02051 11.5065 7.02051 9.90992C7.02051 8.31337 8.30947 7.02441 9.90602 7.02441C11.5026 7.02441 12.7915 8.31337 12.7915 9.90992ZM11.7809 9.91C11.7809 8.87737 10.9387 8.03516 9.9061 8.03516C8.87347 8.03516 8.03125 8.87737 8.03125 9.91C8.03125 10.9426 8.87347 11.7849 9.9061 11.7849C10.9387 11.7849 11.7809 10.9426 11.7809 9.91Z"
+                                            fill="#8316B5"></path>
+                                    </svg>
+                                    <span class="ms-1">Instagram</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a class="footer-link mb-2" href="">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20"
+                                        fill="none">
+                                        <circle cx="10" cy="10.001" r="10" fill="white"></circle>
+                                        <path fill-rule="evenodd" clip-rule="evenodd"
+                                            d="M13.8502 6.46163C13.8502 6.46163 12.2808 6.34863 9.91406 6.34863C7.54734 6.34863 5.9779 6.46163 5.9779 6.46163C5.95645 6.46408 5.93249 6.4663 5.90632 6.46871C5.66435 6.49105 5.23312 6.53086 4.8479 6.93874C4.8479 6.93874 4.50262 7.27774 4.40217 8.05619C4.2829 8.96647 4.28912 9.87674 4.28912 9.87674V10.7305C4.28912 10.7305 4.2829 11.6408 4.40217 12.5511C4.50262 13.3232 4.8479 13.6685 4.8479 13.6685C5.20507 14.0415 5.65894 14.0936 5.94473 14.1264C6.00051 14.1328 6.04989 14.1385 6.0909 14.1456C6.0909 14.1456 6.98862 14.2335 9.91406 14.2586C12.2808 14.2586 13.8502 14.1394 13.8502 14.1394C13.8719 14.1369 13.8962 14.1346 13.9227 14.1322C14.1648 14.1099 14.5955 14.0702 14.9802 13.6685C14.9802 13.6685 15.3255 13.3232 15.4259 12.5511C15.5452 11.6408 15.539 10.7305 15.539 10.7305V9.87674C15.539 9.87674 15.5452 8.96647 15.4259 8.05619C15.3255 7.27774 14.9802 6.93874 14.9802 6.93874C14.595 6.53086 14.1638 6.49105 13.9218 6.46871C13.8956 6.4663 13.8717 6.46408 13.8502 6.46163ZM11.7904 10.1903L8.75195 11.7598V8.60205L11.7904 10.1903Z"
+                                            fill="#8316B5"></path>
+                                    </svg>
+                                    <span class="ms-1">Youtube</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="footer-top-right text-end">
+                    <img src="img/certified.webp" alt="certificate-image">
+                </div>
+            </div>
+            <div class="d-flex justify-content-end mt-4">
+                <p class="footer-slogan d-flex align-items-center my-0 me-1">Kariyer.net ile İş Cebinizde</p>
+                <a class="me-1 px-2" href="">
+                    <img style="width: 122px;" src="img/mobile-button-img-1.webp" alt="App Store">
+                </a>
+                <a class="me-5 me-lg-4" href="">
+                    <img style="width: 122px;" src="img/mobile-button-img-2.webp" alt="Google Play">
+                </a>
+            </div>
+            <div class="d-flex">
+                <div class="col-12">
+                    <hr class="footer-line">
+                </div>
+            </div>
+            <div class="d-flex justify-content-between mt-3">
+                <div class="footer-mid-container-left">
+                    <a href="">
+                        <img src="img/kariyer-footer-img.webp" alt="Kariyer Logo">
+                    </a>
+                    <p class="footer-mid-text mt-2 pt-1">Copyright © 1999-2025 Kariyer.net</p>
+                </div>
+                <div class="footer-mid-container-right mt-3">
+                    <div class="footer-mid-companies d-flex align-items-center">
+                        <a href="https://www.arabam.com/">arabam.com&nbsp;-&nbsp;</a>
+                        <a href="https://www.chemorbis.com/tr/">chemOrbis&nbsp;-&nbsp;</a>
+                        <a href="https://www.cimri.com/">cimri.com&nbsp;-&nbsp;</a>
+                        <a href="https://www.emlakjet.com/">emlakjet&nbsp;-&nbsp;</a>
+                        <a href="https://www.hangikredi.com/">hangikredi.com&nbsp;-&nbsp;</a>
+                        <a href="https://www.neredekal.com/">neredekal.com&nbsp;-&nbsp;</a>
+                        <a href="https://www.sigortam.net/">sigortam.net&nbsp;-&nbsp;</a>
+                        <a class="me-4" href="https://tr.steelorbis.com/">steelOrbis</a>
+                        <p class="kariyer-group-company d-flex align-items-center ms-3 my-0">
+                            Kariyer.net bir&nbsp;&nbsp;&nbsp;
+                            <a href="https://www.ilab.com.tr/">
+                                <img src="img/ilab.webp" alt="iLab">
+                            </a>&nbsp;&nbsp;&nbsp;
+                            grup şirketidir.
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom d-flex mb-4 mt-2">
+                <img src="img/check-mark-footer.webp" alt="İşkur Onayı">
+                <p class="footer-bottom-text ms-3 my-0">
+                    Kariyer.net Elektronik Yayıncılık ve İletişim Hizmetleri A.Ş. Özel İstihdam Bürosu Olarak 31/08/2018-30/08/2021 tarihleri arasında faaliyette bulunmak üzere, Türkiye İş Kurumu tarafından 16.07.2018 tarih ve 26124 sayılı karar uyarınca 170 nolu belge ile faaliyet göstermektedir. 4904 sayılı kanun uyarınca iş arayanlardan ücret alınması yasaktır. Şikayetleriniz için aşağıdaki telefon numaralarına başvurabilirsiniz. Diğer iller için <a href="">tıklayın</a>. Türkiye İş Kurumu İstanbul İl Müdürlüğü: 0212 249 29 87 Türkiye iş Kurumu İstanbul Çalışma ve İş Kurumu Ümraniye Hizmet Merkezi : 0216 523 90 26
+                </p>
+            </div>
+        </footer>
+    </div>
+</body>
+
+</html>
