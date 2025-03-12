@@ -15,8 +15,9 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" />
     <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
     <link href="css/style.css" rel="stylesheet">
-    <!-- prevented bootstrap js cdn from loading before html with "defer" attribute -->
-    <script defer src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- prevented script.js from loading before html with "defer" attribute -->
+    <script type="module" src="js/script.js" defer></script>
 
     <title>İş ilanları & Kariyer Tavsiyeleri Kariyer.net'te!</title>
 </head>
@@ -45,7 +46,7 @@
                             <a class="nav-link nav-main-link" href="#">Kariyer Rehberi</a>
                         </li>
                         <li class="nav-item ms-auto me-3 d-md-none d-lg-inline">
-                            <a class="nav-link publisher" href="#">İlan Paketi Al</a>
+                            <a class="nav-link publisher" href="advert-plan.html">İlan Paketi Al</a>
                         </li>
                         <li class="nav-item dropdown">
                             <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
@@ -157,68 +158,7 @@
         <div class="home-page-promoted d-flex justify-content-center px-md-4 px-lg-0">
             <div class="title-container d-flex flex-column">
                 <h5 class="promoted-title mt-4 mb-3">ÖNE ÇIKAN İLANLAR</h5>
-                <div class="row">
-                    <div class="promoted-container col pt-3 me-3 mb-4 text-center">
-                        <div class="promoted-card container d-flex flex-column justify-content-center">
-                            <div class="promoted-card-top mb-2">
-                                <img class="promoted-card-img" src="img/job-carousel-1.webp" alt="Turkcell">
-                            </div>
-                            <div class="promoted-card-bottom mt-1">
-                                <h6 class="promoted-card-job">Turkcell Gnçytnk 2025</h6>
-                                <p class="promoted-card-company">Turkcell</p>
-                                <p class="promoted-card-location">İstanbul(Tümü)</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="promoted-container col pt-3 me-3 mb-4 text-center">
-                        <div class="promoted-card container d-flex flex-column justify-content-center">
-                            <div class="promoted-card-top mb-2">
-                                <img class="promoted-card-img" src="img/job-carousel-1.webp" alt="Turkcell">
-                            </div>
-                            <div class="promoted-card-bottom mt-1">
-                                <h6 class="promoted-card-job">Turkcell Gnçytnk 2025</h6>
-                                <p class="promoted-card-company">Turkcell</p>
-                                <p class="promoted-card-location">İstanbul(Tümü)</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="promoted-container col pt-3 me-3 mb-4 text-center">
-                        <div class="promoted-card container d-flex flex-column justify-content-center">
-                            <div class="promoted-card-top mb-2">
-                                <img class="promoted-card-img" src="img/job-carousel-1.webp" alt="Turkcell">
-                            </div>
-                            <div class="promoted-card-bottom mt-1">
-                                <h6 class="promoted-card-job">Turkcell Gnçytnk 2025</h6>
-                                <p class="promoted-card-company">Turkcell</p>
-                                <p class="promoted-card-location">İstanbul(Tümü)</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="promoted-container col pt-3 me-3 mb-4 text-center">
-                        <div class="promoted-card container d-flex flex-column justify-content-center">
-                            <div class="promoted-card-top mb-2">
-                                <img class="promoted-card-img" src="img/job-carousel-1.webp" alt="Turkcell">
-                            </div>
-                            <div class="promoted-card-bottom mt-1">
-                                <h6 class="promoted-card-job">Turkcell Gnçytnk 2025</h6>
-                                <p class="promoted-card-company">Turkcell</p>
-                                <p class="promoted-card-location">İstanbul(Tümü)</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="promoted-container col pt-3 mb-4 text-center">
-                        <div class="promoted-card container d-flex flex-column justify-content-center">
-                            <div class="promoted-card-top mb-2">
-                                <img class="promoted-card-img" src="img/job-carousel-1.webp" alt="Turkcell">
-                            </div>
-                            <div class="promoted-card-bottom mt-1">
-                                <h6 class="promoted-card-job">Turkcell Gnçytnk 2025</h6>
-                                <p class="promoted-card-company">Turkcell</p>
-                                <p class="promoted-card-location">İstanbul(Tümü)</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+                <div class="row"></div>
             </div>
         </div>
         <div class="home-fresh-published d-flex justify-content-center my-3">
@@ -238,122 +178,7 @@
                                 <h5 class="fresh-published-title">BUGÜN YAYINLANANLAR</h5>
                                 <a id="all-post-link" href="">Tüm İlanlar</a>
                             </div>
-                            <div class="fresh-published-post row">
-                                <a class="col-6 mb-3" href="">
-                                    <div class="fresh-published-card p-3">
-                                        <div class="row">
-                                            <img class="col-3" src="img/fresh-published-1.webp" alt="Şımart Teknoloji">
-                                            <div class="fresh-published-card-info col-9">
-                                                <span class="fresh-published-pos">Üretim Teknikeri</span>
-                                                <br>
-                                                <span class="fresh-published-comp">Şımart Elektronik Pazarlama</span>
-                                                <br>
-                                                <span class="fresh-published-loc">Ankara <b
-                                                        style="color: rgb(51, 51, 51);">•</b> İş Yerinde</span>
-                                                <div class="d-flex justify-content-between">
-                                                    <span class="fresh-published-type">Tam zamanlı</span>
-                                                    <span class="fresh-published-new">Yeni</span>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </a>
-                                <a class="col-6 mb-3" href="">
-                                    <div class="fresh-published-card p-3">
-                                        <div class="row">
-                                            <img class="col-3" src="img/fresh-published-1.webp" alt="Şımart Teknoloji">
-                                            <div class="fresh-published-card-info col-9">
-                                                <span class="fresh-published-pos">Üretim Teknikeri</span>
-                                                <br>
-                                                <span class="fresh-published-comp">Şımart Elektronik Pazarlama</span>
-                                                <br>
-                                                <span class="fresh-published-loc">Ankara <b
-                                                        style="color: rgb(51, 51, 51);">•</b> İş Yerinde</span>
-                                                <div class="d-flex justify-content-between">
-                                                    <span class="fresh-published-type">Tam zamanlı</span>
-                                                    <span class="fresh-published-new">Yeni</span>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </a>
-                                <a class="col-6 mb-3" href="">
-                                    <div class="fresh-published-card p-3">
-                                        <div class="row">
-                                            <img class="col-3" src="img/fresh-published-1.webp" alt="Şımart Teknoloji">
-                                            <div class="fresh-published-card-info col-9">
-                                                <span class="fresh-published-pos">Üretim Teknikeri</span>
-                                                <br>
-                                                <span class="fresh-published-comp">Şımart Elektronik Pazarlama</span>
-                                                <br>
-                                                <span class="fresh-published-loc">Ankara <b
-                                                        style="color: rgb(51, 51, 51);">•</b> İş Yerinde</span>
-                                                <div class="d-flex justify-content-between">
-                                                    <span class="fresh-published-type">Tam zamanlı</span>
-                                                    <span class="fresh-published-new">Yeni</span>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </a>
-                                <a class="col-6 mb-3" href="">
-                                    <div class="fresh-published-card p-3">
-                                        <div class="row">
-                                            <img class="col-3" src="img/fresh-published-1.webp" alt="Şımart Teknoloji">
-                                            <div class="fresh-published-card-info col-9">
-                                                <span class="fresh-published-pos">Üretim Teknikeri</span>
-                                                <br>
-                                                <span class="fresh-published-comp">Şımart Elektronik Pazarlama</span>
-                                                <br>
-                                                <span class="fresh-published-loc">Ankara <b
-                                                        style="color: rgb(51, 51, 51);">•</b> İş Yerinde</span>
-                                                <div class="d-flex justify-content-between">
-                                                    <span class="fresh-published-type">Tam zamanlı</span>
-                                                    <span class="fresh-published-new">Yeni</span>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </a>
-                                <a class="col-6 mb-3" href="">
-                                    <div class="fresh-published-card p-3">
-                                        <div class="row">
-                                            <img class="col-3" src="img/fresh-published-1.webp" alt="Şımart Teknoloji">
-                                            <div class="fresh-published-card-info col-9">
-                                                <span class="fresh-published-pos">Üretim Teknikeri</span>
-                                                <br>
-                                                <span class="fresh-published-comp">Şımart Elektronik Pazarlama</span>
-                                                <br>
-                                                <span class="fresh-published-loc">Ankara <b
-                                                        style="color: rgb(51, 51, 51);">•</b> İş Yerinde</span>
-                                                <div class="d-flex justify-content-between">
-                                                    <span class="fresh-published-type">Tam zamanlı</span>
-                                                    <span class="fresh-published-new">Yeni</span>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </a>
-                                <a class="col-6 mb-3" href="">
-                                    <div class="fresh-published-card p-3">
-                                        <div class="row">
-                                            <img class="col-3" src="img/fresh-published-1.webp" alt="Şımart Teknoloji">
-                                            <div class="fresh-published-card-info col-9">
-                                                <span class="fresh-published-pos">Üretim Teknikeri</span>
-                                                <br>
-                                                <span class="fresh-published-comp">Şımart Elektronik Pazarlama</span>
-                                                <br>
-                                                <span class="fresh-published-loc">Ankara <b
-                                                        style="color: rgb(51, 51, 51);">•</b> İş Yerinde</span>
-                                                <div class="d-flex justify-content-between">
-                                                    <span class="fresh-published-type">Tam zamanlı</span>
-                                                    <span class="fresh-published-new">Yeni</span>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </a>
-                            </div>
+                            <div class="fresh-published-post row"></div>
                         </div>
                     </div>
                 </div>
@@ -896,7 +721,13 @@
             <div class="footer-bottom d-flex mb-4 mt-2">
                 <img src="img/check-mark-footer.webp" alt="İşkur Onayı">
                 <p class="footer-bottom-text ms-3 my-0">
-                    Kariyer.net Elektronik Yayıncılık ve İletişim Hizmetleri A.Ş. Özel İstihdam Bürosu Olarak 31/08/2018-30/08/2021 tarihleri arasında faaliyette bulunmak üzere, Türkiye İş Kurumu tarafından 16.07.2018 tarih ve 26124 sayılı karar uyarınca 170 nolu belge ile faaliyet göstermektedir. 4904 sayılı kanun uyarınca iş arayanlardan ücret alınması yasaktır. Şikayetleriniz için aşağıdaki telefon numaralarına başvurabilirsiniz. Diğer iller için <a href="">tıklayın</a>. Türkiye İş Kurumu İstanbul İl Müdürlüğü: 0212 249 29 87 Türkiye iş Kurumu İstanbul Çalışma ve İş Kurumu Ümraniye Hizmet Merkezi : 0216 523 90 26
+                    Kariyer.net Elektronik Yayıncılık ve İletişim Hizmetleri A.Ş. Özel İstihdam Bürosu Olarak
+                    31/08/2018-30/08/2021 tarihleri arasında faaliyette bulunmak üzere, Türkiye İş Kurumu tarafından
+                    16.07.2018 tarih ve 26124 sayılı karar uyarınca 170 nolu belge ile faaliyet göstermektedir. 4904
+                    sayılı kanun uyarınca iş arayanlardan ücret alınması yasaktır. Şikayetleriniz için aşağıdaki telefon
+                    numaralarına başvurabilirsiniz. Diğer iller için <a href="">tıklayın</a>. Türkiye İş Kurumu İstanbul
+                    İl Müdürlüğü: 0212 249 29 87 Türkiye iş Kurumu İstanbul Çalışma ve İş Kurumu Ümraniye Hizmet Merkezi
+                    : 0216 523 90 26
                 </p>
             </div>
         </footer>

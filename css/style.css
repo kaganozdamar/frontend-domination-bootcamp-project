@@ -197,7 +197,7 @@ header .dropdown-toggle:hover {
     font-weight: 500;
 }
 
-.fresh-published-card .row img {
+.fresh-published-card-img-container {
     width: 65px;
     height: 65px;
     padding-right: 0px;
