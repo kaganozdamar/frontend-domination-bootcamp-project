@@ -41,7 +41,7 @@ const freshPublishedCards = [
         src: "img/fresh-published-1.webp",
         alt: "Şımart Teknoloji",
         job: "Üretim Teknikeri",
-        company: "Şımart Elektronik Pazarlama",
+        company: "Şımart Teknoloji",
         location: "Ankara",
         jobType: "İş Yerinde"
     },
@@ -89,5 +89,47 @@ const freshPublishedCards = [
 
 const homeJobSearchItems = ["Yazılım Uzmanı", "Satın Alma Müdürü", "Muhasebe Uzmanı", "Makine Mühendisi"];
 
-export { promotedCards, freshPublishedCards, homeJobSearchItems };
+const careerButtons = [
+    {
+        icon: "history_edu",
+        text: "Hangi bölümde seni ne bekliyor?"
+    },
+    {
+        icon: "trending_up",
+        text: "Pozisyonların iş tanımları neler?"
+    },
+    {
+        icon: "school",
+        text: "Meslek grupları ne kadar maaş alıyor?"
+    },
+    {
+        icon: "search",
+        text: "Sana özel CV şablonları burada!"
+    }
+]
+
+const careerGuideCards = [
+    {
+        src: "img/career-guide-1.jpg",
+        alt: "Kariyer rehberi",
+        text: "Zor kişiliklerle çalışırken sakinliğini korumak için 4 strateji"
+    },
+    {
+        src: "img/career-guide-2.jpg",
+        alt: "Kariyer rehberi",
+        text: "Farklı yönetici tipleriyle başa çıkma rehberi: Kiminle nasıl çalışmalısın?"
+    },
+    {
+        src: "img/career-guide-3.jpg",
+        alt: "Kariyer rehberi",
+        text: "Genelde yayımlandı! İş yerinde mobbing'e karşı yeni adım!"
+    },
+    {
+        src: "img/career-guide-4.jpg",
+        alt: "Kariyer rehberi",
+        text: "İşe alımda geri dönüş yapmanın gücü: Şirketiniz için neden önemli?"
+    }
+]
+
+export { promotedCards, freshPublishedCards, homeJobSearchItems, careerButtons, careerGuideCards };
 

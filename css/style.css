@@ -719,6 +719,64 @@ header .dropdown-toggle:hover {
     color: inherit;
 }
 
+.free-trail {
+    display: inline-flex;
+    justify-content: start;
+    position: fixed;
+    z-index: 1000;
+    right: 0;
+    top: 40%;
+    transform: translateX(58%);
+    transition: transform 0.6s;
+}
+
+.free-trail:hover {
+    transform: translateX(0);
+}
+
+.free-trail-button {
+    background-color: rgb(131, 22, 181);
+    color: rgb(255, 255, 255);
+    font-size: 14px;
+    font-weight: 700;
+    border-radius: 4px;
+    border: 0px solid rgb(255, 255, 255);
+}
+
+.free-trail-button:hover {
+    background-color: rgb(105, 17, 146);
+    color: rgb(255, 255, 255);
+    transition: 250ms ease;
+}
+
+.free-trail-right {
+    background-color: rgb(255, 255, 255);
+    width: 220px;
+    border-radius: 0 0 0 8px;
+    border: 1px solid #e5e5e5;
+}
+
+.free-trail-right p {
+    color: rgb(53, 53, 53);
+    font-size: 15px;
+    font-weight: 400;
+}
+
+#free-trail-hover-button {
+    display: inline-block;
+    width: 132px;
+    height: 30px;
+    transform: rotate(-90deg);
+    transform-origin: right top;
+    margin-right: 30px;
+    border-radius: 8px 8px 0 0;
+    background-color: rgb(131, 22, 181);
+    color: rgb(255, 255, 255);
+    font-size: 14px;
+    font-weight: 400;
+    border: 0px solid rgb(255, 255, 255);
+}
+
 @media screen and (max-width: 1199px) {
     .home-page {
         height: 344px;
@@ -792,6 +850,13 @@ header .dropdown-toggle:hover {
     .career-plan-info-title {
         font-size: 16px;
         font-weight: 300;
+    }
+    .home-fresh-published-container .row {
+        flex-wrap: nowrap;
+    }
+    .home-fresh-published-container {
+        overflow-x: scroll;
+        background-color: rgb(245, 245, 245);
     }
 }
 

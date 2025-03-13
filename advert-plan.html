@@ -16,17 +16,25 @@
     <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
     <link href="css/style.css" rel="stylesheet">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-    <!-- prevented script.js from loading before html with "defer" attribute -->
-    <script src="js/script.js" defer></script>
 
     <title>Kariyer.net İlan Paketleri | Kariyer'de İş İlanı Verin</title>
 </head>
 
 <body>
     <div class="advert-body">
+        <div class="free-trail">
+            <button id="free-trail-hover-button">Ücretsiz Deneme</button>
+            <div class="free-trail-right py-3 text-center">
+                <img src="img/home-free-trail.svg">
+                <p class="mb-2">Türkiye’nin en çok kullanılan Aday Takip Sistemi’ni 1 yıl ücretsiz deneyin!</p>
+                <button class="free-trail-button px-5 py-1">
+                    Ücretsiz Dene
+                </button>
+            </div>
+        </div>
         <div class="advert-plan-nav d-flex justify-content-center">
             <div class="container-fluid container-lg">
-                <div class="row justify-content-center">    
+                <div class="row justify-content-center">
                     <div class="col-12 col-xl-10">
                         <div class="advert-plan-nav-container d-flex justify-content-between py-2">
                             <a class="d-flex align-items-center" href="https://www.kariyer.net/">
@@ -369,14 +377,15 @@
                 </div>
             </div>
         </div>
-        <div class="contact-container d-flex mt-1 mb-3 justify-content-center">
+        <div class="contact-container sticky-bottom d-flex mt-1 mb-3 justify-content-center">
             <div class="container">
                 <div class="row justify-content-center">
                     <div class="contact hstack col-12 col-xl-10 gap-4 py-3 px-4">
                         <div>
                             <img src="img/advert-plan-contact.svg" alt="İletişime geç">
                         </div>
-                        <p class="m-0">İşveren çözümlerimiz ile ilgili detaylı bilgi almak için iletişim bilgilerinizi bırakın, sizi arayalım</p>
+                        <p class="m-0">İşveren çözümlerimiz ile ilgili detaylı bilgi almak için iletişim bilgilerinizi
+                            bırakın, sizi arayalım</p>
                         <button class="contact-button ms-auto">Sizi Arayalım</button>
                     </div>
                 </div>
@@ -390,28 +399,52 @@
                 <div class="row justify-content-center">
                     <div class="row col-12 col-xl-10 gap-3">
                         <div class="advert-plan-subcard py-3 col-12 col-md text-center">
-                            <svg width="57" height="56" viewBox="0 0 57 56" fill="none" xmlns="http://www.w3.org/2000/svg"><rect x="0.5" width="56" height="56" rx="28" fill="#EFEAF2"></rect> <path d="M28.4998 21.3333V16H15.1665V40H41.8332V21.3333H28.4998ZM20.4998 37.3333H17.8332V34.6667H20.4998V37.3333ZM20.4998 32H17.8332V29.3333H20.4998V32ZM20.4998 26.6667H17.8332V24H20.4998V26.6667ZM20.4998 21.3333H17.8332V18.6667H20.4998V21.3333ZM25.8332 37.3333H23.1665V34.6667H25.8332V37.3333ZM25.8332 32H23.1665V29.3333H25.8332V32ZM25.8332 26.6667H23.1665V24H25.8332V26.6667ZM25.8332 21.3333H23.1665V18.6667H25.8332V21.3333ZM39.1665 37.3333H28.4998V34.6667H31.1665V32H28.4998V29.3333H31.1665V26.6667H28.4998V24H39.1665V37.3333ZM36.4998 26.6667H33.8332V29.3333H36.4998V26.6667ZM36.4998 32H33.8332V34.6667H36.4998V32Z" fill="#8316B5"></path></svg>
+                            <svg width="57" height="56" viewBox="0 0 57 56" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <rect x="0.5" width="56" height="56" rx="28" fill="#EFEAF2"></rect>
+                                <path
+                                    d="M28.4998 21.3333V16H15.1665V40H41.8332V21.3333H28.4998ZM20.4998 37.3333H17.8332V34.6667H20.4998V37.3333ZM20.4998 32H17.8332V29.3333H20.4998V32ZM20.4998 26.6667H17.8332V24H20.4998V26.6667ZM20.4998 21.3333H17.8332V18.6667H20.4998V21.3333ZM25.8332 37.3333H23.1665V34.6667H25.8332V37.3333ZM25.8332 32H23.1665V29.3333H25.8332V32ZM25.8332 26.6667H23.1665V24H25.8332V26.6667ZM25.8332 21.3333H23.1665V18.6667H25.8332V21.3333ZM39.1665 37.3333H28.4998V34.6667H31.1665V32H28.4998V29.3333H31.1665V26.6667H28.4998V24H39.1665V37.3333ZM36.4998 26.6667H33.8332V29.3333H36.4998V26.6667ZM36.4998 32H33.8332V34.6667H36.4998V32Z"
+                                    fill="#8316B5"></path>
+                            </svg>
                             <br>
                             <span>1999'dan bu yana</span>
                             <br>
                             <span>sektöründe öncü</span>
                         </div>
                         <div class="advert-plan-subcard py-3 col-12 col-md text-center">
-                            <svg width="57" height="56" viewBox="0 0 57 56" fill="none" xmlns="http://www.w3.org/2000/svg"><rect x="0.5" width="56" height="56" rx="28" fill="#EFEAF2"></rect> <path d="M28.4998 21.3333V16H15.1665V40H41.8332V21.3333H28.4998ZM20.4998 37.3333H17.8332V34.6667H20.4998V37.3333ZM20.4998 32H17.8332V29.3333H20.4998V32ZM20.4998 26.6667H17.8332V24H20.4998V26.6667ZM20.4998 21.3333H17.8332V18.6667H20.4998V21.3333ZM25.8332 37.3333H23.1665V34.6667H25.8332V37.3333ZM25.8332 32H23.1665V29.3333H25.8332V32ZM25.8332 26.6667H23.1665V24H25.8332V26.6667ZM25.8332 21.3333H23.1665V18.6667H25.8332V21.3333ZM39.1665 37.3333H28.4998V34.6667H31.1665V32H28.4998V29.3333H31.1665V26.6667H28.4998V24H39.1665V37.3333ZM36.4998 26.6667H33.8332V29.3333H36.4998V26.6667ZM36.4998 32H33.8332V34.6667H36.4998V32Z" fill="#8316B5"></path></svg>
+                            <svg width="57" height="56" viewBox="0 0 57 56" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <rect x="0.5" width="56" height="56" rx="28" fill="#EFEAF2"></rect>
+                                <path
+                                    d="M28.4998 21.3333V16H15.1665V40H41.8332V21.3333H28.4998ZM20.4998 37.3333H17.8332V34.6667H20.4998V37.3333ZM20.4998 32H17.8332V29.3333H20.4998V32ZM20.4998 26.6667H17.8332V24H20.4998V26.6667ZM20.4998 21.3333H17.8332V18.6667H20.4998V21.3333ZM25.8332 37.3333H23.1665V34.6667H25.8332V37.3333ZM25.8332 32H23.1665V29.3333H25.8332V32ZM25.8332 26.6667H23.1665V24H25.8332V26.6667ZM25.8332 21.3333H23.1665V18.6667H25.8332V21.3333ZM39.1665 37.3333H28.4998V34.6667H31.1665V32H28.4998V29.3333H31.1665V26.6667H28.4998V24H39.1665V37.3333ZM36.4998 26.6667H33.8332V29.3333H36.4998V26.6667ZM36.4998 32H33.8332V34.6667H36.4998V32Z"
+                                    fill="#8316B5"></path>
+                            </svg>
                             <br>
                             <span>1999'dan bu yana</span>
                             <br>
                             <span>sektöründe öncü</span>
                         </div>
                         <div class="advert-plan-subcard py-3 col-12 col-md text-center">
-                            <svg width="57" height="56" viewBox="0 0 57 56" fill="none" xmlns="http://www.w3.org/2000/svg"><rect x="0.5" width="56" height="56" rx="28" fill="#EFEAF2"></rect> <path d="M28.4998 21.3333V16H15.1665V40H41.8332V21.3333H28.4998ZM20.4998 37.3333H17.8332V34.6667H20.4998V37.3333ZM20.4998 32H17.8332V29.3333H20.4998V32ZM20.4998 26.6667H17.8332V24H20.4998V26.6667ZM20.4998 21.3333H17.8332V18.6667H20.4998V21.3333ZM25.8332 37.3333H23.1665V34.6667H25.8332V37.3333ZM25.8332 32H23.1665V29.3333H25.8332V32ZM25.8332 26.6667H23.1665V24H25.8332V26.6667ZM25.8332 21.3333H23.1665V18.6667H25.8332V21.3333ZM39.1665 37.3333H28.4998V34.6667H31.1665V32H28.4998V29.3333H31.1665V26.6667H28.4998V24H39.1665V37.3333ZM36.4998 26.6667H33.8332V29.3333H36.4998V26.6667ZM36.4998 32H33.8332V34.6667H36.4998V32Z" fill="#8316B5"></path></svg>
+                            <svg width="57" height="56" viewBox="0 0 57 56" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <rect x="0.5" width="56" height="56" rx="28" fill="#EFEAF2"></rect>
+                                <path
+                                    d="M28.4998 21.3333V16H15.1665V40H41.8332V21.3333H28.4998ZM20.4998 37.3333H17.8332V34.6667H20.4998V37.3333ZM20.4998 32H17.8332V29.3333H20.4998V32ZM20.4998 26.6667H17.8332V24H20.4998V26.6667ZM20.4998 21.3333H17.8332V18.6667H20.4998V21.3333ZM25.8332 37.3333H23.1665V34.6667H25.8332V37.3333ZM25.8332 32H23.1665V29.3333H25.8332V32ZM25.8332 26.6667H23.1665V24H25.8332V26.6667ZM25.8332 21.3333H23.1665V18.6667H25.8332V21.3333ZM39.1665 37.3333H28.4998V34.6667H31.1665V32H28.4998V29.3333H31.1665V26.6667H28.4998V24H39.1665V37.3333ZM36.4998 26.6667H33.8332V29.3333H36.4998V26.6667ZM36.4998 32H33.8332V34.6667H36.4998V32Z"
+                                    fill="#8316B5"></path>
+                            </svg>
                             <br>
                             <span>1999'dan bu yana</span>
                             <br>
                             <span>sektöründe öncü</span>
                         </div>
                         <div class="advert-plan-subcard py-3 col-12 col-md text-center">
-                            <svg width="57" height="56" viewBox="0 0 57 56" fill="none" xmlns="http://www.w3.org/2000/svg"><rect x="0.5" width="56" height="56" rx="28" fill="#EFEAF2"></rect> <path d="M28.4998 21.3333V16H15.1665V40H41.8332V21.3333H28.4998ZM20.4998 37.3333H17.8332V34.6667H20.4998V37.3333ZM20.4998 32H17.8332V29.3333H20.4998V32ZM20.4998 26.6667H17.8332V24H20.4998V26.6667ZM20.4998 21.3333H17.8332V18.6667H20.4998V21.3333ZM25.8332 37.3333H23.1665V34.6667H25.8332V37.3333ZM25.8332 32H23.1665V29.3333H25.8332V32ZM25.8332 26.6667H23.1665V24H25.8332V26.6667ZM25.8332 21.3333H23.1665V18.6667H25.8332V21.3333ZM39.1665 37.3333H28.4998V34.6667H31.1665V32H28.4998V29.3333H31.1665V26.6667H28.4998V24H39.1665V37.3333ZM36.4998 26.6667H33.8332V29.3333H36.4998V26.6667ZM36.4998 32H33.8332V34.6667H36.4998V32Z" fill="#8316B5"></path></svg>
+                            <svg width="57" height="56" viewBox="0 0 57 56" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <rect x="0.5" width="56" height="56" rx="28" fill="#EFEAF2"></rect>
+                                <path
+                                    d="M28.4998 21.3333V16H15.1665V40H41.8332V21.3333H28.4998ZM20.4998 37.3333H17.8332V34.6667H20.4998V37.3333ZM20.4998 32H17.8332V29.3333H20.4998V32ZM20.4998 26.6667H17.8332V24H20.4998V26.6667ZM20.4998 21.3333H17.8332V18.6667H20.4998V21.3333ZM25.8332 37.3333H23.1665V34.6667H25.8332V37.3333ZM25.8332 32H23.1665V29.3333H25.8332V32ZM25.8332 26.6667H23.1665V24H25.8332V26.6667ZM25.8332 21.3333H23.1665V18.6667H25.8332V21.3333ZM39.1665 37.3333H28.4998V34.6667H31.1665V32H28.4998V29.3333H31.1665V26.6667H28.4998V24H39.1665V37.3333ZM36.4998 26.6667H33.8332V29.3333H36.4998V26.6667ZM36.4998 32H33.8332V34.6667H36.4998V32Z"
+                                    fill="#8316B5"></path>
+                            </svg>
                             <br>
                             <span>1999'dan bu yana</span>
                             <br>
@@ -488,7 +521,8 @@
                         </div>
                         <hr class="mb-4">
                         <div class="advert-footer-mid mb-3 d-flex justify-content-between">
-                            <img id="advert-footer-kariyer-logo" src="img/kariyer-advert-footer-img.svg" alt="Kariyer.net logo">
+                            <img id="advert-footer-kariyer-logo" src="img/kariyer-advert-footer-img.svg"
+                                alt="Kariyer.net logo">
                             <div class="d-flex justify-content-between gap-2">
                                 <span>Kariyer.net bir</span>
                                 <img id="advert-footer-ilab-logo" src="img/ilab.webp" alt="iLab logo">
@@ -509,7 +543,14 @@
                                 <img src="img/check-mark-footer.webp" alt="İşkur onayı">
                             </div>
                             <p class="m-0">
-                                Kariyer.net Elektronik Yayıncılık ve İletişim Hizmetleri A.Ş. Özel İstihdam Bürosu Olarak 31/08/2018-30/08/2021 tarihleri arasında faaliyette bulunmak üzere, Türkiye İş Kurumu tarafından 16.07.2018 tarih ve 26124 sayılı karar uyarınca 170 nolu belge ile faaliyet göstermektedir. 4904 sayılı kanun uyarınca iş arayanlardan ücret alınması yasaktır. Şikayetleriniz için aşağıdaki telefon numaralarına başvurabilirsiniz. Diğer iller için <a href="">tıklayın</a>. Türkiye İş Kurumu İstanbul İl Müdürlüğü: 0212 249 29 87 Türkiye iş Kurumu İstanbul Çalışma ve İş Kurumu Ümraniye Hizmet Merkezi : 0216 523 90 26
+                                Kariyer.net Elektronik Yayıncılık ve İletişim Hizmetleri A.Ş. Özel İstihdam Bürosu
+                                Olarak 31/08/2018-30/08/2021 tarihleri arasında faaliyette bulunmak üzere, Türkiye İş
+                                Kurumu tarafından 16.07.2018 tarih ve 26124 sayılı karar uyarınca 170 nolu belge ile
+                                faaliyet göstermektedir. 4904 sayılı kanun uyarınca iş arayanlardan ücret alınması
+                                yasaktır. Şikayetleriniz için aşağıdaki telefon numaralarına başvurabilirsiniz. Diğer
+                                iller için <a href="">tıklayın</a>. Türkiye İş Kurumu İstanbul İl Müdürlüğü: 0212 249 29
+                                87 Türkiye iş Kurumu İstanbul Çalışma ve İş Kurumu Ümraniye Hizmet Merkezi : 0216 523 90
+                                26
                             </p>
                         </div>
                     </div>
